@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f1419">
+    <title>CryptoAI Analyzer</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading -->
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+        <div>Loading AI Engine...</div>
+    </div>
+
+    <header class="glass">
+        <h1>🤖 CryptoAI</h1>
+        <button id="themeToggle">🌙</button>
+    </header>
+
+    <main id="main" style="display:none;">
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search Bitcoin, Ethereum...">
+        </div>
+
+        <!-- AI Signals -->
+        <section class="panel glass">
+            <h2>AI Signals</h2>
+            <div id="signals"></div>
+        </section>
+
+        <!-- Live Prices -->
+        <section class="panel glass">
+            <h2>Live Prices</h2>
+            <div id="coins" class="coin-grid"></div>
+        </section>
+
+        <!-- Chart -->
+        <section class="panel glass">
+            <h2>Chart: <span id="chartSymbol">BTC</span></h2>
+            <div id="chart"></div>
+        </section>
+
+        <!-- Market Sentiment -->
+        <section class="panel glass">
+            <h2>Sentiment</h2>
+            <div class="sentiment">
+                <div>Fear & Greed: <span id="fng" class="skeleton">--</span></div>
+                <div>Gas: <span id="gas" class="skeleton">--</span> Gwei</div>
+            </div>
+        </section>
+
+        <!-- News -->
+        <section class="panel glass">
+            <h2>News</h2>
+            <div id="news"></div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
